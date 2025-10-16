@@ -1,0 +1,52 @@
+
+:root{--bg:#0b0d12;--card:#12151c;--text:#e8edf2;--muted:#9aa4b2;--accent:#7cc5ff;}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif}
+a{color:var(--accent);text-decoration:none} a:hover{opacity:.85}
+.container{max-width:1000px;margin:0 auto;padding:24px}
+.nav{display:flex;gap:16px;align-items:center;justify-content:space-between;padding:16px 0}
+.nav .links a {
+  background: #232222;          /* button background */
+  color: #6d8bdd;               /* text color */
+  padding: 8px 14px;            /* button size */
+  border-radius: 8px;           /* rounded corners */
+  text-decoration: none;        /* remove underline */
+  transition: all 0.2s ease;    /* smooth hover */
+}
+
+.nav .links a:hover {
+  background: #7cc5ff;          /* hover background */
+  color: #02101a;               /* hover text color */
+}
+/* Highlight the current (active) tab */
+.nav .links a.active {
+  background: #7cc5ff;      /* same blue as your hover color */
+  color: #02101a;           /* dark text for contrast */
+  font-weight: 600;         /* optional: make it bolder */
+}
+
+.brand{font-weight:700;letter-spacing:.3px}
+.btn{background:var(--accent);color:#02101a;border:0;padding:10px 14px;border-radius:12px;font-weight:600}
+.hero{display:grid;gap:18px;padding:48px 0}
+.hero h1{font-size:44px;line-height:1.15;margin:0}
+.hero p{color:var(--muted);margin:0}
+.card{background:var(--card);border:1px solid #1e2530;border-radius:18px;padding:18px;box-shadow:0 8px 24px rgba(2,8,20,.3)}
+.grid{display:grid;gap:16px}
+@media (min-width:700px){.grid.cols-3{grid-template-columns:repeat(3,1fr)}.grid.cols-2{grid-template-columns:repeat(2,1fr)}}
+.footer{color:var(--muted);padding:24px 0;border-top:1px solid #1e2530;margin-top:48px}
+.imgfit{width:100%;height:220px;object-fit:cover;border-radius:14px;border:1px solid #222a35}
+.tag{display:inline-block;font-size:12px;background:#0f2535;color:#a5d8ff;padding:4px 8px;border-radius:999px;border:1px solid #1b4056;margin-right:8px}
+.gallery{columns:1;column-gap:16px}
+@media(min-width:700px){.gallery{columns:2}}
+@media(min-width:1000px){.gallery{columns:3}}
+.gallery img{break-inside:avoid;margin:0 0 16px;width:100%;border-radius:16px;border:1px solid #1f2732}
+kbd{background:#10151f;border:1px solid #2b3544;border-radius:6px;padding:2px 6px;font-size:12px}
+.code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:14px;background:#0f1219;border:1px solid #222a35;border-radius:12px;padding:14px;overflow:auto}
+
+/* Carousel */
+.carousel{position:relative;overflow:hidden;border-radius:16px;border:1px solid #1e2530}
+.carousel img{display:none;width:100%;height:220px;object-fit:cover}
+.carousel img.active{display:block}
+.carousel button{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.45);color:#fff;border:none;font-size:24px;padding:4px 10px;border-radius:10px;cursor:pointer}
+.carousel .prev{left:8px}.carousel .next{right:8px}
+.carousel button:hover{background:rgba(0,0,0,.6)}
